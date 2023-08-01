@@ -30,4 +30,5 @@ urlpatterns = [
     path('LosoVision/', include('LosoVision.urls')),
     path('ItemsApp/', include('ItemsApp.urls')),
     path('Games/', include('Games.urls')),
+    path('JA3Mercs/', include('JA3Mercs.urls')),
 ]
