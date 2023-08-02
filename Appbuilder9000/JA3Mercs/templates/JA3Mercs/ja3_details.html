@@ -1,0 +1,35 @@
+{% extends "ja3_base.html" %}
+
+{% block title %}
+    Mercenary Details
+{% endblock %}
+
+{% block header %}
+    Mercenary Details
+{% endblock %}
+
+{% block content %}
+<p class="fade-in-image" xmlns="http://www.w3.org/1999/html">See your mercenaries details here.</p>
+
+
+
+<div class="merc_display">
+    <form name="mercForm" method="POST" action="../details/">
+        <table>
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_table }}
+        </table>
+        <div class="frmBtn_container">
+            <input type="submit">
+            <div class="frmBtn_container">
+                <a href="../{{ form.pk }}delete/"><button class="btn" type="button">DELETE</button></a>
+                <a href="{% url 'ja3_enroll' %}"><button class="btn" type="button">CANCEL</button></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock %}
