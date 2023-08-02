@@ -15,13 +15,18 @@
     position: fixed;
     z-index: 100;
     background-color: rgb(25, 25, 25);
-    opacity: .9;
-    transform: 1s;
+    opacity: .7;
+    transition: .3s;
+}
+
+.topnav:hover {
+    opacity: 1;
+    transition: .3s;
 }
 
 .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #000066;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -29,18 +34,18 @@
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: rgb(50,50,50);
     color: black;
-}
-
-.topnav a.active {
-    background-color: #00001a;
-    color: white;
+    opacity: 1;
+    transition: .3s;
 }
 /* END NAV MENU */
 
+.header {
+}
+
 body {
-    background: #00001a url("/static/images/bg_screen.png") no-repeat fixed center;
+    background: #000000 url("/static/images/bg_screen.png") no-repeat fixed center;
     background-size: cover;
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -53,8 +58,13 @@ footer {
     background-color: rgb(25, 25, 25);
     bottom: 0px;
     z-index: 100;
-    opacity: .9;
-    transform: 1s;
+    opacity: .7;
+    transition: .3s;
+}
+
+footer:hover {
+    opacity: 1;
+    transition: .3s;
 }
 
 input, button{
@@ -67,6 +77,10 @@ textarea {
 
 .center {
     text-align: center;
+}
+
+.fade-in-image {
+    animation: fadeIn 1s;
 }
 
 .content-container-container {
@@ -90,7 +104,8 @@ textarea {
     align-items: center;
     }
 
-h1{
+h1 {
+    text-align: center;
     color: rgb(200,200,200);
     font-family: 'Bungee Spice', cursive;
     font-family: 'Roboto', sans-serif;
@@ -124,19 +139,19 @@ th, td {
 }
 
 td:hover {
-    background-color: #e6e6ff;
+    background-color: #4a4a4a;
 }
 
 table tbody tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #292929;
 }
 
 table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    background-color: ##2e2e2e;
 }
 
 table tbody tr:last-of-type {
-    border-bottom: 2px solid #000099;
+    border-bottom: 2px solid #000000;
 }
 
 table tbody tr.active-row {
@@ -158,3 +173,7 @@ button {
     font-size: 16px;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
