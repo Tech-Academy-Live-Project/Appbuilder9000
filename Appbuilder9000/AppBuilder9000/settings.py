@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'LosoVision',
     'ItemsApp',
     'Games',
+    'JA3Mercs',
 ]
 
 MIDDLEWARE = [
