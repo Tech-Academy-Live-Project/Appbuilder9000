@@ -18,11 +18,11 @@
         <div class="frmObject_container fade-in-image">
             {% csrf_token %}
             {{ form.non_field_errors }}
-            {{ form.as_p }}
+            {{ form.as_table }} <!--Used form.as_table because it looked better-->
         </div>
         <div class="frmBtn_container fade-in-image">
             <input type="submit" class="btn" value="Create New Record" name="Save_Item">
-            <a href="{% url 'ja3_enroll' %}"><button type="button" class="btn" value="Cancel">Cancel</button></a>
+            <a href="{% url 'ja3_home' %}"><button type="button" class="btn" value="Cancel">Cancel</button></a>
         </div>
 
     </form>

@@ -5,7 +5,8 @@ from django import forms
 class MercForm(ModelForm):
     class Meta:
         model = Merc
-        fields = '__all__'
+        fields = ['fname','callsign','lname','training','salary','description']
         widgets = {
-            'description': Textarea(attrs={'cols': 80, 'rows': 20}),
+            'description': forms.Textarea(attrs={'style':'resize:none;'}),
         }
+        fname = "First Name"

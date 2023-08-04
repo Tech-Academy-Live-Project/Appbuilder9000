@@ -1,41 +1,41 @@
 /* NAV MENU */
-.topnav {
+.top {
+    top: 0;
+}
+
+.header-footer {
+    background-color: rgb(25,25,25);
     text-align: center;
     position: fixed;
-    background-color: black;
     overflow: hidden;
     margin: none;
     display: flex;
     justify-content: center;
-    text-transform: uppercase;
     text-align: center;
     width: 100%;
-    top: 0;
     overflow: hidden;
     position: fixed;
     z-index: 100;
-    background-color: rgb(25, 25, 25);
-    opacity: .7;
+    opacity: .5;
     transition: .3s;
+    font-family: 'Bungee Spice', cursive;
 }
 
-.topnav:hover {
+.header-footer:hover {
     opacity: 1;
     transition: .3s;
 }
 
-.topnav a {
+.header-footer a {
     float: left;
-    color: #000066;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
 }
 
-.topnav a:hover {
-    background-color: rgb(50,50,50);
-    color: black;
+.header-footer a:hover {
+    background-color: rgb(100,100,100);
     opacity: 1;
     transition: .3s;
 }
@@ -46,25 +46,15 @@
 
 body {
     background: #000000 url("/static/images/bg_screen.png") no-repeat fixed center;
-    background-size: cover;
+    background-size: auto 100%;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Bungee Spice', cursive;
+    color: rgb(191,187,169);
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0.7;
 }
 
-footer {
-    position: fixed;
-    width: 100%;
-    background-color: rgb(25, 25, 25);
-    bottom: 0px;
-    z-index: 100;
-    opacity: .7;
-    transition: .3s;
-}
-
-footer:hover {
-    opacity: 1;
-    transition: .3s;
+.bottom {
+    bottom: 0;
 }
 
 input, button{
@@ -107,13 +97,10 @@ textarea {
 h1 {
     text-align: center;
     color: rgb(200,200,200);
-    font-family: 'Bungee Spice', cursive;
-    font-family: 'Roboto', sans-serif;
     font-family: 'Rubik Mono One', sans-serif;
 }
 
 .white-fade {
-    font-size: 40px;
     font-weight: 100;
     background: -webkit-linear-gradient(#FFFFFF, #7C7C7C);
     -webkit-background-clip: text;
@@ -126,7 +113,15 @@ table {
     font-size: 1em;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
+
+table textarea {
+    height: 10em;
+}
+
 
 table thead tr {
     background-color: #009879;
@@ -134,8 +129,20 @@ table thead tr {
     text-align: left;
 }
 
-th, td {
-    padding: 12px 15px;
+th {
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.description {
+    font-size: 12px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 td:hover {
@@ -161,16 +168,57 @@ table tbody tr.active-row {
 
 a {
     text-decoration: none;
-    color: #00001a;
+    color: white;
 }
 
 form {
     margin: 10px;
 }
 
-button {
+.frmObject_container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.frmObject_container input {
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+}
+
+.frmObject_container textarea {
+    width: inherit;
+    height: 6em;
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+}
+
+.frmObject_container input {
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+}
+
+.frmObject_container select {
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+}
+
+label[for="id_fname"] {
+}
+
+label[for="id_fname"]:after {
+}
+
+label[for="id_lname"] {
+}
+
+label[for="id_lname"]:after {
+}
+
+.btn {
     margin: 10px;
     font-size: 16px;
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+    padding: 5px 10px;
+    color: #58544d;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
 }
 
 @keyframes fadeIn {

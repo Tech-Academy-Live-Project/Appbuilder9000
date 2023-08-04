@@ -9,24 +9,24 @@
 {% endblock %}
 
 {% block content %}
-    <p class="fade-in-image">Enroll your hired (fictional) mercenaries here.</p>
+    <p>Please select a previously-enrolled mercenary from the list,<br>or click "New Mercenary" to enroll a new contact.</p>
 
 
 
-<div class="merc_display">
+<div>
     <form name="mercForm" method="POST" action="">
         <div class="formObject">
             {% csrf_token %}
-            <label for="merc_id" class="fade-in-image">Select a mercenary from the list to edit:</label>
-            <select id="merc_id" name="merc" onChange="top.location.href=this.options[this.selectedIndex].value;" placeholder="" class="fade-in-image">
+            <label for="merc_id">Select a mercenary from the list to edit:<br></label>
+            <select id="merc_id" name="merc" onChange="top.location.href=this.options[this.selectedIndex].value;" placeholder="">
                 <option selected disabled>Choose a Mercenary...</option>
             {% for merc in mercs %}
                 <option value="../{{ merc.pk }}/details/">{{ merc.callsign }}</option>
             {% endfor %}
             </select>
             <div class="fromBtn_container">
-                <a href="{% url 'ja3_createRecord' %}"><button type="button" class="btn fade-in-image">Enroll Mercenary</button></a>
-                <a href="{% url 'ja3_home' %}"><button type="button" class="btn fade-in-image">Logout of Profile</button></a>
+                <a href="{% url 'ja3_createRecord' %}"><button type="button" class="btn">New Mercenary</button></a>
+                <a href="{% url 'ja3_home' %}"><button type="button" class="btn">Logout of Profile</button></a>
             </div>
         </div>
     </form>

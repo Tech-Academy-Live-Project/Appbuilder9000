@@ -10,5 +10,9 @@
 {% endblock %}
 
 {% block content %}
-    <p class="fade-in-image">This is a manually-managed roster for your hired (fictional) mercenaries.</p>
+
+    <p>This is a manually-managed roster for your hired (fictional) mercenaries.</p>
+    <p>Please select whether you want to enroll a new mercenary, or see the mercenary roster.</p>
+    <a href="{% url 'ja3_createRecord' %}"><button type="button" class="btn">Enroll</button></a>
+    <a href="{% url 'ja3_roster' %}"><button type="button" class="btn">Roster</button></a>
 {% endblock %}

@@ -9,6 +9,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:ital,wght@0,100;1,100&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Mono&family=Roboto:ital,wght@0,100;1,100&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Condensed:wght@300&family=Roboto+Mono&family=Roboto:ital,wght@0,100;1,100&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 		<title>{% block title %}{% endblock %}</title>
 	</head>
 
@@ -16,16 +18,14 @@
 
 	<body id="body">
 
-		<div class="content-container-container">
+		<div class="content-container-container fade-in-image">
 			<div class="content-container">
-			<h1 class="white-fade fade-in-image center">{% block header %}{% endblock %}</h1>
+			<h1 class="white-fade center fade-in-image">{% block header %}{% endblock %}</h1>
 			{% block content %}{% endblock %}
 			</div>
 		</div>
 	</body>
 
-	<footer class="center">
-		{% include 'JA3Mercs/ja3_footer.html' %}
-	</footer>
+	{% include 'JA3Mercs/ja3_footer.html' %}
 
 </html>
