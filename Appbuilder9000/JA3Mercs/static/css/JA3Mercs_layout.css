@@ -41,9 +41,12 @@
 }
 /* END NAV MENU */
 
+/* HEADER */
 .header {
 }
+/* END HEADER */
 
+/* BODY */
 body {
     background: #000000 url("/static/images/bg_screen.png") no-repeat fixed center;
     background-size: cover;
@@ -51,7 +54,9 @@ body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Bungee Spice', cursive;
 }
+/* END BODY */
 
+/* FOOTER */
 footer {
     position: fixed;
     width: 100%;
@@ -66,6 +71,7 @@ footer:hover {
     opacity: 1;
     transition: .3s;
 }
+/* END FOOTER */
 
 input, button{
 }
