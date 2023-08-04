@@ -41,9 +41,12 @@
 }
 /* END NAV MENU */
 
+/* HEADER */
 .header {
 }
+/* END HEADER */
 
+/* BODY */
 body {
     background: #000000 url("/static/images/bg_screen.png") no-repeat fixed center;
     background-size: auto 100%;
@@ -52,10 +55,24 @@ body {
     font-family: 'Roboto Mono', monospace;
     opacity: 0.7;
 }
+/* END BODY */
 
-.bottom {
-    bottom: 0;
+/* FOOTER */
+footer {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    bottom: 0px;
+    z-index: 100;
+    opacity: .7;
+    transition: .3s;
 }
+
+footer:hover {
+    opacity: 1;
+    transition: .3s;
+}
+/* END FOOTER */
 
 input, button{
 }
