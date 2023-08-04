@@ -3,16 +3,16 @@ from .models import Merc
 from .forms import MercForm
 
 
-
+# Pathway to Homepage
 def ja3_home(request):
     return render(request, 'JA3Mercs/ja3_home.html')
 
-
+# Pathway to Enroll page
 def ja3_enroll(request):
     mercs = Merc.objects.all()
     return render(request, 'JA3Mercs/ja3_enroll.html', {'mercs': mercs})
 
-
+# Function to
 def details(request, pk):
     pk = int(pk)
     item = get_object_or_404(Merc, pk=pk)
@@ -21,7 +21,7 @@ def details(request, pk):
         if form.is_valid():
             form2 = form.save(commit=False)
             form2.save()
-            return redirect('ja3_enroll')
+            return redirect('ja3_roster')
         else:
             print(form.errors)
     else:
@@ -34,7 +34,7 @@ def delete(request, pk):
     item = get_object_or_404(Merc, pk=pk)
     if request.method == 'POST':
         item.delete()
-        return redirect('ja3_enroll')
+        return redirect('ja3_roster')
     context = {"item": item,}
     return render(request, "JA3Mercs/ja3_confirmDelete.html", context)
 
@@ -49,11 +49,17 @@ def confirmed(request):
 
 def createRecord(request):
     form = MercForm(request.POST or None)
+    form = MercForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('ja3_enroll')
+        return redirect('ja3_roster')
     else:
         print(form.errors)
         form = MercForm()
     context = { 'form': form }
     return render(request, "JA3Mercs/ja3_createRecord.html", context)
+
+def roster(request):
+    mercs = Merc.objects.all
+    return render(request, "JA3Mercs/ja3_roster.html", {'mercs': mercs})
+
