@@ -10,4 +10,5 @@ urlpatterns = [
     path('confirmdelete/', views.confirmed, name='ja3_confirmed'),
     path('createrecord/', views.createRecord, name='ja3_createRecord'),
     path('roster/', views.roster, name='ja3_roster'),
+    path('api/', views.api, name='ja3_api'),
 ]

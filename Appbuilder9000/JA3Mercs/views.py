@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect,  get_object_or_404
 from .models import Merc
 from .forms import MercForm
+# In order to read a .js response from a link in Python
+from urllib.request import urlopen
+import requests
+import json
 
 
 # Pathway to Homepage
@@ -63,3 +67,14 @@ def roster(request):
     mercs = Merc.objects.all
     return render(request, "JA3Mercs/ja3_roster.html", {'mercs': mercs})
 
+# def for the api grab request. look at functions.js
+def api(request):
+    print("Grabbing API...")
+    response = requests.get('https://api.github.com/')
+    print('Status Code = ')
+    print(response.status_code)
+    url = "https://api.github.com"
+    response = urlopen(url)
+    data_json = json.loads(response.read())
+    print(data_json)
+    return render(request, "JA3Mercs/ja3_api.html")
