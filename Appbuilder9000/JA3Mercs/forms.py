@@ -10,4 +10,3 @@ class MercForm(ModelForm):
         widgets = {
             'description': Textarea(attrs={'cols': 80, 'rows': 20}),
         }
-        fname = "First Name"
